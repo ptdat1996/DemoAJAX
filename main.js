@@ -1,13 +1,3 @@
-// $("#btn-get").click(function () {
-//     $.get("https://reqres.in/api/users?page=2", function (data, status) {
-//         console.log("click!");
-//         var result = JSON.stringify(data);
-//         $("#test").text(result);
-//         //console.log(data);
-//     })
-// });
-
-
 $("form").submit(function (event) { 
     var formData ={
         'email' : $('input[name=email]').val(),
@@ -21,7 +11,6 @@ $("form").submit(function (event) {
         dataType: "json",
         encode : true,
         success: function (data) {     
-            console.log(data);
         $("#messagge").text(data);        
         }
     }).done(function(data){
@@ -30,12 +19,3 @@ $("form").submit(function (event) {
 
     event.preventDefault();
 });
-
-// $("#btn-get").click(function () {
-//     $.get("http://localhost:3000/get", function (data, status) {
-//         console.log("click!");
-//         var result = JSON.stringify(data);
-//         $("#test").text(result);
-//         //console.log(data);
-//     })
-// });
